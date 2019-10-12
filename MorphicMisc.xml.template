@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>MorphicMisc</name>
+  <summary>Additional Morphic packages</summary>
+
+  <description>
+  A collection of packages with additional Morphs and extensions to Morphic.
+  
+  Basic morphs used by various packages 
+- AddedCursors
+- BorderedImageMorph
+- DropColorMorph
+- DropTargetMorph
+- EditPanel
+- FontMorph used to display and select a font
+- FrameMorph
+- FramedLayoutMorph
+- ImagePallet
+- LabelMorph
+- LayoutMorphEditPanel useful to edit Layouts
+- LayoutSpecEditPanel useful to edit LayoutSpecs
+- LineMorph
+- PalletLayoutMorph
+- Panel
+- PluggableScrollBar
+- RadioButtonMorph
+- RadioGroup
+- SignMorph useful morph to "point to" non-morph objects
+- SimpleNumberEntryMorph
+- WindowTitleMorph
+  </description>
+
+  <homepage>https://github.com/LimaOno/Morphic</homepage>
+
+  <feed-for interface="https://limaono.github.io/MorphicMisc.xml"/>
+
+  <group license="OSI Approved :: MIT/X">
+      <command name="run">
+      <runner interface="https://limaono.github.io/0cuis.xml">
+        <arg>MorphicMisc.image</arg>
+        <arg>-rMorphic-Misc1</arg>
+      </runner>
+    </command>
+
+     <requires interface="https://limaono.github.io/CuisSource.xml">
+    	<environment insert='.' mode='replace' name='CUISPATH'/>
+    </requires>
+
+    <implementation arch="*-*" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/LimaOno/Morphic/archive/v{version}.zip"/>
+      <environment insert='.' mode='append' name='CUISPACKAGESPATH'/>
+   </implementation>
+  </group>
+</interface>
